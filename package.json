@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
+    "download": "^8.0.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "sjcl": "^1.0.8",
+    "typeorm": "^0.2.32",
+    "type": "module"
+  }
+}
