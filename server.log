@@ -18,3 +18,12 @@
 [17:33:35] Console thread started (ThreadId: 8780)
 [17:33:35] Server started
 [17:33:38][Warning] Event handler at myresources:file:///D:/Programmieren/altv-server/resources/myresources/server/command/commandFunction.mjs:40 was too long 9ms
+[17:41:09] Stopping resource freeroam
+[17:41:09] Stopped resource freeroam
+[17:41:09] Stopping resource chat
+[17:41:09] Stopping resource myresources
+[17:41:09] Stopped resource myresources
+[17:41:09] Stopped resource chat
+[17:41:09] Stopping resource datenbank
+[17:41:09] Stopped resource datenbank
+[17:41:09] Server shutdown
