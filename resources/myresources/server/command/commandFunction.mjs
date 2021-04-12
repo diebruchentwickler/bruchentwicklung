@@ -48,7 +48,6 @@ alt.onClient('sendPlayerName', (player, currentName) => {
             } else {
                 player.dbSqlId = playerDataName[0].sqlId;
                 console.log(player.dbSqlId);
-                console.log(playerDataName);
             }
         });
     });
