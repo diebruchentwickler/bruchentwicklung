@@ -47,6 +47,7 @@ alt.onClient('sendPlayerName', (player, currentName) => {
                 await db.upsertDataAsync({altAccountName: currentNameAlt}, 'Account');
             } else {
                 player.dbSqlId = playerDataName[0].sqlId;
+                console.log(player.dbSqlId);
             }
         });
     });
