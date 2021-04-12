@@ -20,7 +20,6 @@ alt.on('ConnectionComplete', () => {
     console.log('Ich glaub es hat funktioniert gonzo xD');
 });
 
-
 alt.on('playerConnect', spawnPlayer);
 alt.on('playerDeath', deadSpawnPlayer);
 alt.on('playerEnteredVehicle', enterveh);

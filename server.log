@@ -1,22 +1,20 @@
-[14:19:31] alt:V Server 2.11 (release)
-[14:19:31] Starting alt:V Server on 0.0.0.0:7788
-[14:19:31] Loading resource freeroam
-[14:19:31] Loaded resource freeroam
-[14:19:31] Loading resource chat
-[14:19:31] Loaded resource chat
-[14:19:31] Loading resource myresources
-[14:19:33] Loaded resource myresources
-[14:19:33] Loading resource datenbank
-[14:19:34] Loaded resource datenbank
-[14:19:34] Required server permissions:
-[14:19:34] Optional server permissions:
-[14:19:34] Starting HTTP server on 0.0.0.0:7788
-[14:19:34] Main thread started (ThreadId: 19100)
-[14:19:34] Colshape thread started (ThreadId: 17812)
-[14:19:34] EntityStreamer thread started (ThreadId: 1460)
-[14:19:34] Network thread started (ThreadId: 17708)
-[14:19:34] Console thread started (ThreadId: 18168)
-[14:19:34] Server started
-[14:19:39][Warning] Event handler at myresources:file:///D:/Programmieren/altv-server/resources/myresources/server/command/commandFunction.mjs:33 was too long 10ms
-[14:38:09] [chat:cmd] Lukee: /givegun stungun
-[14:38:19] [chat:cmd] Lukee: /getgun stunggun
+[17:33:32] alt:V Server 2.11 (release)
+[17:33:32] Starting alt:V Server on 0.0.0.0:7788
+[17:33:32] Loading resource freeroam
+[17:33:32] Loaded resource freeroam
+[17:33:32] Loading resource chat
+[17:33:32] Loaded resource chat
+[17:33:32] Loading resource myresources
+[17:33:34] Loaded resource myresources
+[17:33:34] Loading resource datenbank
+[17:33:35] Loaded resource datenbank
+[17:33:35] Required server permissions:
+[17:33:35] Optional server permissions:
+[17:33:35] Starting HTTP server on 0.0.0.0:7788
+[17:33:35] Main thread started (ThreadId: 17872)
+[17:33:35] Colshape thread started (ThreadId: 9516)
+[17:33:35] EntityStreamer thread started (ThreadId: 14612)
+[17:33:35] Network thread started (ThreadId: 6396)
+[17:33:35] Console thread started (ThreadId: 8780)
+[17:33:35] Server started
+[17:33:38][Warning] Event handler at myresources:file:///D:/Programmieren/altv-server/resources/myresources/server/command/commandFunction.mjs:40 was too long 9ms

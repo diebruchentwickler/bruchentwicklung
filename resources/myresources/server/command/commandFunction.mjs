@@ -27,50 +27,47 @@ export function vehicle(player, args){
 }
 
 export async function spawnPlayer(player) {
+    player.model = 'mp_m_freemode_01';
     alt.emitClient(player, 'localPlayerName');
-}
+
+    if (!player.dbPos) {
+        player.spawn(playerSpawn.x, playerSpawn.y, playerSpawn.z);
+    } else {
+        player.spawn(player.dbPos.x, player.dbPos.y, player.dbPos.z);
+    }
+};
 
 alt.onClient('sendPlayerName', (player, currentName) => {
-    db.selectData('Account',['altAccountName'], async (data1) => {
+    db.selectData('Account', ['altAccountName'], async (data1) => {
         let currentNameAlt = JSON.stringify(currentName);
-        console.log(currentNameAlt);
         let playerDataName;
         await db.fetchAllByField('altAccountName', currentNameAlt, 'Account', async (data) => {
             playerDataName = data;
-            console.log(playerDataName);
-            if(!playerDataName){
+            if (!playerDataName) {
                 await db.upsertDataAsync({altAccountName: currentNameAlt}, 'Account');
             } else {
                 player.dbSqlId = playerDataName[0].sqlId;
                 console.log(player.dbSqlId);
             }
-            await db.upsertDataAsync({accountId: player.dbSqlId}, 'Character');
-            let playerPos = JSON.stringify(player.pos);
-            console.log(playerPos);
-            await db.upsertDataAsync({position: playerPos}, 'Character')
-            player.spawn(playerPos.x , playerPos.y, playerPos.z);
+        });
+    });
+    db.selectData('Character', ['position', 'accountId'], async (data) => {
+        const currentPos = JSON.stringify(player.pos);
+        console.log(currentPos);
+        await db.upsertDataAsync({accountId: player.dbSqlId, position: currentPos}, 'Character');
+        await db.fetchAllByField('position', currentPos, 'Character',async (data) =>{
+            console.log(data);
+            player.dbPos = data;
         });
     });
 });
 
-
 //nach Tod
 export async function deadSpawnPlayer(player) {
-    const currentPlayerHealth = player.health;
-    if (currentPlayerHealth === 0) {
-            let playerPos = JSON.stringify(player.pos);
-            console.log(playerPos);
-            await db.upsertDataAsync({position: playerPos}, 'Character')
+  const currentPlayerHealth = player.health;
+  if (currentPlayerHealth === 0) {
 
-            await db.fetchAllByField('position', playerPos, 'Character', async (posPlayer)=>{
-                if (playerPos === posPlayer){
-                    player.spawn(playerPos.x, playerPos.y, playerPos.z);
-                } else{
-                    console.log('der player ist nicht am Todes Pukte gespawnt')
-                }
-        });
-    }
-
+  }
 }
 //atower
 export function spawnPoint(player){
