@@ -1,29 +1,30 @@
-[17:33:32] alt:V Server 2.11 (release)
-[17:33:32] Starting alt:V Server on 0.0.0.0:7788
-[17:33:32] Loading resource freeroam
-[17:33:32] Loaded resource freeroam
-[17:33:32] Loading resource chat
-[17:33:32] Loaded resource chat
-[17:33:32] Loading resource myresources
-[17:33:34] Loaded resource myresources
-[17:33:34] Loading resource datenbank
-[17:33:35] Loaded resource datenbank
-[17:33:35] Required server permissions:
-[17:33:35] Optional server permissions:
-[17:33:35] Starting HTTP server on 0.0.0.0:7788
-[17:33:35] Main thread started (ThreadId: 17872)
-[17:33:35] Colshape thread started (ThreadId: 9516)
-[17:33:35] EntityStreamer thread started (ThreadId: 14612)
-[17:33:35] Network thread started (ThreadId: 6396)
-[17:33:35] Console thread started (ThreadId: 8780)
-[17:33:35] Server started
-[17:33:38][Warning] Event handler at myresources:file:///D:/Programmieren/altv-server/resources/myresources/server/command/commandFunction.mjs:40 was too long 9ms
-[17:41:09] Stopping resource freeroam
-[17:41:09] Stopped resource freeroam
-[17:41:09] Stopping resource chat
-[17:41:09] Stopping resource myresources
-[17:41:09] Stopped resource myresources
-[17:41:09] Stopped resource chat
-[17:41:09] Stopping resource datenbank
-[17:41:09] Stopped resource datenbank
-[17:41:09] Server shutdown
+[11:24:15] alt:V Server 2.11 (release)
+[11:24:15] Starting alt:V Server on 0.0.0.0:7788
+[11:24:15] Loading resource freeroam
+[11:24:15] Loaded resource freeroam
+[11:24:15] Loading resource chat
+[11:24:15] Loaded resource chat
+[11:24:15] Loading resource myresources
+[11:24:17] Loaded resource myresources
+[11:24:17] Loading resource datenbank
+[11:24:19] Loaded resource datenbank
+[11:24:19] Required server permissions:
+[11:24:19] Optional server permissions:
+[11:24:19] Starting HTTP server on 0.0.0.0:7788
+[11:24:19] Main thread started (ThreadId: 20316)
+[11:24:19] Colshape thread started (ThreadId: 20312)
+[11:24:19] EntityStreamer thread started (ThreadId: 15744)
+[11:24:19] Network thread started (ThreadId: 16820)
+[11:24:19] Console thread started (ThreadId: 4964)
+[11:24:19] Server started
+[11:24:20][Warning] Event handler at myresources:file:///D:/Programmieren/altv-server/resources/myresources/server/command/commandFunction.mjs:40 was too long 9ms
+[11:24:22] [chat:cmd] Lukee: /bank
+[11:24:28] Stopping resource freeroam
+[11:24:28] Stopped resource freeroam
+[11:24:28] Stopping resource chat
+[11:24:28] Stopping resource myresources
+[11:24:28] Stopped resource myresources
+[11:24:28] Stopped resource chat
+[11:24:28] Stopping resource datenbank
+[11:24:28] Stopped resource datenbank
+[11:24:28] Server shutdown
