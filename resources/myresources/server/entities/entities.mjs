@@ -46,9 +46,6 @@ export const BankAccount = new orm.EntitySchema({
     name: 'BankAccount',
     columns: {
         ...BaseColumnSchemaPart,
-        accountId:{
-            type: 'bigint',
-        },
         bankAccountId:{
             type: 'bigint',
         },

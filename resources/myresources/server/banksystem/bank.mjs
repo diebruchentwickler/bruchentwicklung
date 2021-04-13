@@ -3,19 +3,30 @@ import * as chat from 'chat';
 import {Account, BankAccount} from "../entities/entities.mjs";
 import {db} from "../server.mjs";
 
-export function Accountbank(player) {
 
-    db.selectData('BankAccount',['bankAccountId'], async (account) =>{
-        player.dbSqlId
-        await db.fetchAllByField('altAccountName', currentNameAlt, 'BankAccount', async (data) => {
-
-        });
-    });
-
+export async function Accountbank(player) {
+    let playerBankId = JSON.stringify(player.dbSqlId);
+    let balance = 1000;
     player.name = player;
-    player.balance = parseFloat(balance);
-    let note = `${player.name} du hast ein Bankkonto mit einem Startkapital von ${player.balance}$ angelegt!`;
-    alt.emitClient(player, 'notifi', note);
+    player.balance = balance;
+    const newData = {
+        bankAccountId: playerBankId,
+        bankBalance: balance
+    };
+    await db.fetchAllByField('bankAccountId', playerBankId, 'BankAccount', async (sendPlayerBankId) => {
+        if (sendPlayerBankId.length < 1) {
+            db.insertData(newData, 'BankAccount', async (data) => {
+                let bankNote = `${player.name} du hast ein Bankkonto mit einem Startkapital von ${player.balance}$ angelegt!`;
+                alt.emitClient(player, 'notifi', bankNote);
+            });
+        } else {
+            player.bankId = sendPlayerBankId[0].sqlId;
+            let bankNoteKonto = `${player.name} du hast bereits ein Konto angelegt!`;
+            alt.emitClient(player, 'notifi', bankNoteKonto);
+        }
+        });
+
+
 
 }
 
